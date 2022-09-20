@@ -5,7 +5,21 @@ import {types} from "sass";
 import Boolean = types.Boolean;
 
 export function buildLoaders({isDev}: BuildOptions): RuleSetRule[] {
-    const cssLoader =   {
+    const svgLoader = {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+    }
+
+    const fileLoader = {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+            {
+                loader: 'file-loader',
+            },
+        ],
+    }
+
+    const cssLoader = {
             test: /\.s[ac]ss$/i,
             use: [
                 isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
@@ -31,6 +45,8 @@ export function buildLoaders({isDev}: BuildOptions): RuleSetRule[] {
     }
 
     return [
+        fileLoader,
+        svgLoader,
         typeScriptLoader,
         cssLoader
     ]
