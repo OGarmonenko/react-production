@@ -8,7 +8,7 @@ interface INavbarProps {
 
 export const Navbar = ({className}: INavbarProps) => {
     return (
-        <div className={classNames(cls.Navbar, {}, [className])}>
+        <div className={classNames(cls.navbar, {}, [className])}>
             <div className={classNames(cls.links)}>
                 <AppLink to='/' theme={AppLinkTheme.INVERTABLE}>
                     Main
