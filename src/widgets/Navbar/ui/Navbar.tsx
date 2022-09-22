@@ -17,7 +17,6 @@ export const Navbar = ({className}: INavbarProps) => {
                     About
                 </AppLink>
             </div>
-
         </div>
     );
 };
