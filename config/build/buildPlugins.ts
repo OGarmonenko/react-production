@@ -18,6 +18,6 @@ export function buildPlugins({ paths, isDev }: BuildOptions) : WebpackPluginInst
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev),
         }),
-        isDev && new ReactRefreshWebpackPlugin(),
+        // isDev && new ReactRefreshWebpackPlugin(),
     ];
 }
