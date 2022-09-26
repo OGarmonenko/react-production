@@ -2,5 +2,8 @@
   "Translate": "Перевести",
   "Link Main page": "Главная",
   "Link About us": "О нас",
-  "Page not found": "Страница не найдена"
+  "Page not found": "Страница не найдена",
+  "An unexpected error has occurred": "Произошла непредвиденная ошибка",
+  "Refresh page": "Обновить страницу",
+  "throw Error": "пробросить ошибку"
 }
