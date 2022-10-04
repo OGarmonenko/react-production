@@ -11,14 +11,7 @@ export const Navbar = ({ className }: INavbarProps) => {
     const { t } = useTranslation();
     return (
         <div className={classNames(cls.navbar, {}, [className])}>
-            <div className={classNames(cls.links)}>
-                <AppLink to="/" theme={AppLinkTheme.INVERTABLE}>
-                    {t('Link Main page')}
-                </AppLink>
-                <AppLink to="/about" theme={AppLinkTheme.INVERTABLE}>
-                    {t('Link About us')}
-                </AppLink>
-            </div>
+            <div className={classNames(cls.links)} />
         </div>
     );
 };
