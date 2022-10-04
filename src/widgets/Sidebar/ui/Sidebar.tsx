@@ -4,7 +4,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './Sidebar.module.scss';
 import { ThemeSwitcher } from '@/widgets/toSideBar/ThemeSwitcher';
 import { LangSwitcher } from '@/widgets/toSideBar/LangSwitcher';
-import { Button } from '@/shared/ui/Button/Button';
+import { Button, ButtonSize, ButtonVariant } from '@/shared/ui/Button/Button';
 
 interface ISidebarProps {
     className?: string;
@@ -25,12 +25,16 @@ export const Sidebar = ({ className }: ISidebarProps) => {
             <Button
                 data-testid="sidebar-toggle"
                 onClick={onToggle}
+                className={classNames(cls.collapseBtn)}
+                theme={ButtonVariant.BACKGROUND_INVERTED}
+                size={ButtonSize.L}
+                square
             >
-                {t('Toggle')}
+                {collapsed ? '>' : '<'}
             </Button>
             <div className={cls.switchers}>
                 <ThemeSwitcher />
-                <LangSwitcher />
+                <LangSwitcher short={collapsed} />
             </div>
         </div>
     );
