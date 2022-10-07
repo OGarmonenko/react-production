@@ -8,5 +8,7 @@
   "Toggle": "Toggle",
   "Short language": "RU",
   "Language": "Russian",
-  "Sign in": "Sign in"
+  "Sign in": "Sign in",
+  "increment": "increment",
+  "decrement": "decrement"
 }

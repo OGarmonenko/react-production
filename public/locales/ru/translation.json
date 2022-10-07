@@ -8,5 +8,7 @@
   "Toggle": "Переключить",
   "Short language": "EN",
   "Language": "Английский",
-  "Sign in": "Войти"
+  "Sign in": "Войти",
+  "increment": "increment",
+  "decrement": "decrement"
 }
