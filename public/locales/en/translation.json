@@ -10,5 +10,7 @@
   "Language": "Russian",
   "Sign in": "Sign in",
   "increment": "increment",
-  "decrement": "decrement"
+  "decrement": "decrement",
+  "Login": "Login",
+  "Password": "Password"
 }
