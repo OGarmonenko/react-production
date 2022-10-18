@@ -20,12 +20,11 @@ export function buildPlugins({ paths, isDev }: BuildOptions) : WebpackPluginInst
         }),
     ];
 
-    plugins.push(new BundleAnalyzerPlugin({
-        openAnalyzer: false,
-    }));
-
     if (isDev) {
         plugins.push(new ReactRefreshWebpackPlugin());
+        plugins.push(new BundleAnalyzerPlugin({
+            openAnalyzer: false,
+        }));
     }
     return plugins;
 }
