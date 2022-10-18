@@ -10,11 +10,11 @@ import { getLoginState } from '../../model/selectors/getLoginState';
 import { loginByUsername } from '../../model/services/loginByUsername';
 import { Text, TextTheme } from '@/shared/ui/Text/Text';
 
-interface ILoginFormProps {
+export interface ILoginFormProps {
     className?: string;
 }
 
-export const LoginForm = memo(({ className }: ILoginFormProps) => {
+const LoginForm = memo(({ className }: ILoginFormProps) => {
     const { t } = useTranslation();
     const dispatch = useDispatch();
     const {
@@ -62,3 +62,5 @@ export const LoginForm = memo(({ className }: ILoginFormProps) => {
         </div>
     );
 });
+
+export default LoginForm;
