@@ -1,10 +1,7 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-
-import { Theme } from '@/app/providers/ThemeProvider';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import '@/app/styles/variables/global.scss';
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
-import { LoginForm } from './LoginForm';
+import LoginForm from './LoginForm';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator';
 
 export default {
