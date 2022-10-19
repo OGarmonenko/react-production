@@ -13,7 +13,8 @@
   "decrement": "decrement",
   "Login": "Логин",
   "Password": "Пароль",
-  "Authorization form": "Authorization form",
-  "Sign out": "Sign out",
-  "Incorrect username  or password": "Неверный логин или пароль"
+  "Authorization form": "Форма авторизации",
+  "Sign out": "Выйти",
+  "Incorrect username  or password": "Неверный логин или пароль",
+  "PROFILE PAGE": "Страница профиля"
 }
