@@ -1,11 +1,17 @@
 import { configureStore, DeepPartial, ReducersMapObject } from '@reduxjs/toolkit';
-import type { IStateSchema } from './stateSchema';
+import { To } from 'history';
+import { NavigateOptions } from 'react-router';
+import type { IStateSchema, IThunkExtraArg } from './stateSchema';
 import { counterReducer } from '@/entities/Counter';
 import { userReducer } from '@/entities/User';
 import { createReducerManager } from '@/app/providers/StoreProvider/config/reducerManager';
+import { $api } from '@/shared/api/api';
 
-// eslint-disable-next-line max-len
-export function createReduxStore(initialState?: IStateSchema, asyncReducers?: ReducersMapObject<IStateSchema>) {
+export function createReduxStore(
+    initialState?: IStateSchema,
+    asyncReducers?: ReducersMapObject<IStateSchema>,
+    navigate?: (to: To, options?: NavigateOptions) => void,
+) {
     const rootReducer: ReducersMapObject<IStateSchema> = {
         ...asyncReducers,
         counter: counterReducer,
@@ -14,10 +20,20 @@ export function createReduxStore(initialState?: IStateSchema, asyncReducers?: Re
 
     const reducerManager = createReducerManager(rootReducer);
 
-    const store = configureStore<IStateSchema>({
+    const extraArg: IThunkExtraArg = {
+        api: $api,
+        navigate,
+    };
+
+    const store = configureStore({
         reducer: reducerManager.reduce,
         devTools: __IS_DEV__,
         preloadedState: initialState,
+        middleware: (getDefaultMiddleware) => getDefaultMiddleware({
+            thunk: {
+                extraArgument: extraArg,
+            },
+        }),
     });
 
     // @ts-ignore

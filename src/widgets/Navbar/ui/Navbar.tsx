@@ -13,16 +13,16 @@ interface INavbarProps {
 
 export const Navbar = memo(({ className }: INavbarProps) => {
     const { t } = useTranslation();
-    const [isAuthModal, setisAuthModal] = useState(false);
+    const [isAuthModal, setIsAuthModal] = useState(false);
     const authData = useSelector(getUserAuthData);
     const dispatch = useDispatch();
 
     const onCloseModal = useCallback(() => {
-        setisAuthModal(false);
+        setIsAuthModal(false);
     }, []);
 
     const onOpenModal = useCallback(() => {
-        setisAuthModal(true);
+        setIsAuthModal(true);
     }, []);
 
     const onLogout = useCallback(() => {
