@@ -99,6 +99,7 @@
     "react-router-dom": "6.4.0"
   },
   "loki": {
+    "fetchFailIgnore": ".*",
     "configurations": {
       "chrome.laptop": {
         "target": "chrome.docker",
