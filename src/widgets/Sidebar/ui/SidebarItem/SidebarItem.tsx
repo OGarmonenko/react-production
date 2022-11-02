@@ -17,11 +17,9 @@ export const SidebarItem = memo(({ item, collapsed }: SidebarItemProps) => {
 
     const isAuth = useSelector(getUserAuthData);
 
-    console.log(isAuth, 'isAuth');
-
-    if (item.authOnly && !isAuth) {
+    /* if (item.authOnly && !isAuth) {
         return null;
-    }
+    } */
 
     return (
         <AppLink

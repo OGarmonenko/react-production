@@ -1,12 +1,13 @@
 import { memo, useCallback, useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import {
     fetchProfileData,
     getProfileData,
     getProfileError, getProfileForm,
-    getProfileIsLoading, getProfileReadonly, profileActions,
+    getProfileIsLoading, getProfileReadonly, getProfileValidateErrors, profileActions,
     ProfileCard,
     profileReducer,
 } from '@/entities/Profile';
@@ -14,6 +15,8 @@ import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 import { Currency } from '@/entities/Currency';
 import { Country } from '@/entities/Country';
+import { Text, TextTheme } from '@/shared/ui/Text/Text';
+import { ValidateProfileError } from '@/entities/Profile/model/types/IProfile';
 
 const reducers: ReducersList = {
     profile: profileReducer,
@@ -24,11 +27,21 @@ interface ProfilePageProps {
 }
 
 const ProfilePage = memo(({ className }: ProfilePageProps) => {
+    const { t } = useTranslation('profile');
     const dispatch = useAppDispatch();
     const formData = useSelector(getProfileForm);
     const isLoading = useSelector(getProfileIsLoading);
     const error = useSelector(getProfileError);
     const readonly = useSelector(getProfileReadonly);
+    const validateErrors = useSelector(getProfileValidateErrors);
+
+    const validateErrorTranslates = {
+        [ValidateProfileError.SERVER_ERROR]: t('Серверная ошибка при сохранении'),
+        [ValidateProfileError.INCORRECT_COUNTRY]: t('Некорректный регион'),
+        [ValidateProfileError.NO_DATA]: t('Данные не указаны'),
+        [ValidateProfileError.INCORRECT_USER_DATA]: t('Имя и фамилия обязательны'),
+        [ValidateProfileError.INCORRECT_AGE]: t('Некорректный возраст'),
+    };
 
     useEffect(() => {
         dispatch(fetchProfileData());
@@ -70,6 +83,14 @@ const ProfilePage = memo(({ className }: ProfilePageProps) => {
         <DynamicModuleLoader reducers={reducers}>
             <div className={classNames('', {}, [className])}>
                 <ProfilePageHeader />
+                {validateErrors?.length && validateErrors.map((err) => (
+                    <Text
+                        key={err}
+                        theme={TextTheme.ERROR}
+                        text={validateErrorTranslates[err]}
+                    />
+                ))}
+
                 <ProfileCard
                     data={formData}
                     isLoading={isLoading}
