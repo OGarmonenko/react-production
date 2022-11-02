@@ -2,5 +2,13 @@
   "Profile page": "Profile page",
   "Edit": "Edit",
   "Name": "Name",
-  "Lastname": "Lastname"
+  "Lastname": "Lastname",
+  "Произошла ошибка при загрузке профиля": "Произошла ошибка при загрузке профиля",
+  "Попробуйте обновить страницу": "Попробуйте обновить страницу",
+  "Cancel": "Cancel",
+  "Save": "Save",
+  "Age": "Age",
+  "City": "City",
+  "Username": "Username",
+  "Avatar": "Avatar"
 }

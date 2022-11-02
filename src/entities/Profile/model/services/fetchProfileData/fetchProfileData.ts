@@ -13,7 +13,6 @@ export const fetchProfileData = createAsyncThunk<
 
             try {
                 const response = await extra.api.get<IProfile>('/profile');
-
                 return response.data;
             } catch (e) {
                 console.log(e);
