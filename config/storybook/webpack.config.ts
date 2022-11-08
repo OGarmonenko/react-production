@@ -23,7 +23,7 @@ export default ({ config }: {config: webpack.Configuration}) => {
     const rules = config.module!.rules as RuleSetRule[];
     config.module!.rules = rules!.map((rule) => {
         if (/svg/.test(rule.test as string)) {
-            return { ...rule, exclude: /\.svg$/i };
+            return { ...rule, exclude: /\.(svg|png|jpe?g|gif)$/i };
         }
         return rule;
     });
@@ -32,6 +32,16 @@ export default ({ config }: {config: webpack.Configuration}) => {
         test: /\.svg$/,
         use: ['@svgr/webpack'],
     });
+
+    config!.module!.rules.push({
+        test: /\.(png|jpe?g|gif)$/i,
+        loader: 'file-loader',
+        options: {
+            name: '[path][name].[ext]',
+        }
+        ,
+    });
+
     config.module!.rules.push(buildCssLoader(true));
 
     config.plugins!.push(new DefinePlugin({
