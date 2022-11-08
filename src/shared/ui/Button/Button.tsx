@@ -28,7 +28,7 @@ interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
     children?: ReactNode;
 }
 
-export const Button = memo((props: IButtonProps) => {
+export const Button = (props: IButtonProps) => {
     const {
         className,
         children,
@@ -53,4 +53,4 @@ export const Button = memo((props: IButtonProps) => {
             {children}
         </button>
     );
-});
+};
