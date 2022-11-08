@@ -26,7 +26,7 @@ interface ProfilePageProps {
     className?: string;
 }
 
-const ProfilePage = memo(({ className }: ProfilePageProps) => {
+const ProfilePage = ({ className }: ProfilePageProps) => {
     const { t } = useTranslation('profile');
     const dispatch = useAppDispatch();
     const formData = useSelector(getProfileForm);
@@ -110,6 +110,6 @@ const ProfilePage = memo(({ className }: ProfilePageProps) => {
             </div>
         </DynamicModuleLoader>
     );
-});
+};
 
-export default ProfilePage;
+export default memo(ProfilePage);
