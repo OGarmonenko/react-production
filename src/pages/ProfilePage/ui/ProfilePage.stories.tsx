@@ -6,7 +6,6 @@ import ProfilePage from '@/pages/ProfilePage/ui/ProfilePage';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator';
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
-import avatar from '@/shared/assets/tests/storybook.jpg';
 
 export default {
     title: 'pages/ProfilePage',
@@ -24,8 +23,6 @@ const args = {
     first: 'Olga',
     city: 'Grodno',
     currency: Currency.USD,
-    avatar,
-
 };
 
 const Template: ComponentStory<typeof ProfilePage> = (args) => <ProfilePage {...args} />;
