@@ -8,6 +8,7 @@ import type { ICounterSchema } from '@/entities/Counter';
 import type { IUserSchema } from '@/entities/User';
 import type { ILoginSchema } from '@/features/AuthByUsername';
 import type { IProfileSchema } from '@/entities/Profile';
+import type { IArticleDetailsSchema } from '@/entities/Article';
 
 export interface IStateSchema {
     counter: ICounterSchema;
@@ -16,6 +17,7 @@ export interface IStateSchema {
     // asyncReducers
     loginForm?: ILoginSchema;
     profile?: IProfileSchema;
+    articleDetails?: IArticleDetailsSchema;
 }
 
 export type StateSchemaKey = keyof IStateSchema;
