@@ -9,6 +9,7 @@ import type { IUserSchema } from '@/entities/User';
 import type { ILoginSchema } from '@/features/AuthByUsername';
 import type { IProfileSchema } from '@/entities/Profile';
 import type { IArticleDetailsSchema } from '@/entities/Article';
+import { ArticleDetailsCommentsSchema } from '@/pages/ArticleDetailsPage';
 
 export interface IStateSchema {
     counter: ICounterSchema;
@@ -18,6 +19,7 @@ export interface IStateSchema {
     loginForm?: ILoginSchema;
     profile?: IProfileSchema;
     articleDetails?: IArticleDetailsSchema;
+    articleDetailsComments?: ArticleDetailsCommentsSchema;
 }
 
 export type StateSchemaKey = keyof IStateSchema;
