@@ -5,10 +5,12 @@ import { Text, TextSize } from '@/shared/ui/Text/Text';
 import { Skeleton } from '@/shared/ui/Skeleton/Skeleton';
 import cls from './CommentCard.module.scss';
 import { IComment } from '../../model/types/comment';
+import { AppLink } from '@/shared/ui/Applink/AppLink';
+import { AppRoutes } from '@/shared/config/routeConfig/routeConfig';
 
 interface CommentCardProps {
     className?: string;
-    comment: IComment;
+    comment?: IComment;
     isLoading?: boolean;
 }
 
@@ -27,12 +29,16 @@ export const CommentCard = memo((props: CommentCardProps) => {
         );
     }
 
+    if (!comment) {
+        return null;
+    }
+
     return (
-        <div className={classNames(cls.CommentCard, {}, [className])}>
-            <div className={cls.header}>
+        <div className={classNames(cls.commentCard, {}, [className])}>
+            <AppLink to={`${AppRoutes.ARTICLE_DETAILS}${comment.user.id}`} className={cls.header}>
                 {comment.user.avatar ? <Avatar size={30} src={comment.user.avatar} /> : null}
                 <Text className={cls.username} title={comment.user.username} />
-            </div>
+            </AppLink>
             <Text className={cls.text} text={comment.text} />
         </div>
     );

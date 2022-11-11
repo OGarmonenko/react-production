@@ -13,7 +13,7 @@ export type AppRoutesProps = RouteProps & {
 export const enum AppRoutes {
     MAIN = '/',
     ABOUT = '/about',
-    PROFILE = '/profile',
+    PROFILE = '/profile/', // +id
     ARTICLES = '/articles',
     ARTICLE_DETAILS = '/articles/', // +id
     NOT_FOUND = '*',
@@ -22,7 +22,7 @@ export const enum AppRoutes {
 export const routeConfig: AppRoutesProps[] = [
     { path: AppRoutes.MAIN, element: <MainPage /> },
     { path: AppRoutes.ABOUT, element: <AboutPage /> },
-    { path: AppRoutes.PROFILE, element: <ProfilePage />, authOnly: true },
+    { path: `${AppRoutes.PROFILE}:id`, element: <ProfilePage />, authOnly: true },
     { path: AppRoutes.ARTICLES, element: <ArticlesPage />, authOnly: true },
     { path: `${AppRoutes.ARTICLE_DETAILS}:id`, element: <ArticleDetailsPage />, authOnly: true },
     { path: AppRoutes.NOT_FOUND, element: <NotFoundPage /> },

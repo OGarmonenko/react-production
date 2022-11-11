@@ -1,4 +1,3 @@
-import { userActions } from '@/entities/User';
 import { TestAsyncThunk } from '@/shared/lib/test/TestAsyncThunk';
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
@@ -6,6 +5,7 @@ import { ValidateProfileError } from '@/entities/Profile';
 import { updateProfileData } from './updateProfileData';
 
 const data = {
+    id: '1',
     username: 'admin',
     age: 32,
     country: Country.Belarus,

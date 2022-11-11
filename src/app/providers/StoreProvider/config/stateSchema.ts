@@ -10,6 +10,7 @@ import type { ILoginSchema } from '@/features/AuthByUsername';
 import type { IProfileSchema } from '@/entities/Profile';
 import type { IArticleDetailsSchema } from '@/entities/Article';
 import { ArticleDetailsCommentsSchema } from '@/pages/ArticleDetailsPage';
+import { AddCommentFormSchema } from '@/features/addCommentForm';
 
 export interface IStateSchema {
     counter: ICounterSchema;
@@ -20,6 +21,7 @@ export interface IStateSchema {
     profile?: IProfileSchema;
     articleDetails?: IArticleDetailsSchema;
     articleDetailsComments?: ArticleDetailsCommentsSchema;
+    addCommentForm?: AddCommentFormSchema;
 }
 
 export type StateSchemaKey = keyof IStateSchema;
