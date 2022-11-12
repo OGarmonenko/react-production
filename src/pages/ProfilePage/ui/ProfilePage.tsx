@@ -22,6 +22,7 @@ import { Country } from '@/entities/Country';
 import { Text, TextTheme } from '@/shared/ui/Text/Text';
 import { ValidateProfileError } from '@/entities/Profile/model/types/IProfile';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect';
+import { PageContent } from '@/shared/ui/PageContent/PageContent';
 
 const reducers: ReducersList = {
     profile: profileReducer,
@@ -89,7 +90,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers}>
-            <div className={classNames('', {}, [className])}>
+            <PageContent className={classNames('', {}, [className])}>
                 <ProfilePageHeader />
                 {validateErrors?.length && validateErrors.map((err) => (
                     <Text
@@ -113,7 +114,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
                     onChangeCurrency={onChangeCurrency}
                     onChangeCountry={onChangeCountry}
                 />
-            </div>
+            </PageContent>
         </DynamicModuleLoader>
     );
 };
