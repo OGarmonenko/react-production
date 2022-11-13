@@ -24,7 +24,7 @@ export function createReduxStore(
 
     const extraArg: IThunkExtraArg = {
         api: $api,
-        navigate,
+        // navigate,
     };
 
     const store = configureStore({
