@@ -14,7 +14,7 @@ import {
 } from '../../model/selectors/articlesPageSelectors';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect';
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
-import { PageContent } from '@/shared/ui/PageContent/PageContent';
+import { PageContent } from '@/widgets/PageContent/PageContent';
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
 

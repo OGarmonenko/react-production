@@ -21,7 +21,7 @@ import {
 } from '../../model/services/addCommentForArticle/addCommentForArticle';
 import { Button, ButtonVariant } from '@/shared/ui/Button/Button';
 import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
-import { PageContent } from '@/shared/ui/PageContent/PageContent';
+import { PageContent } from '@/widgets/PageContent/PageContent';
 
 interface ArticleDetailsPageProps {
     className?: string;
