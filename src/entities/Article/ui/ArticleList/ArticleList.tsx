@@ -13,7 +13,7 @@ interface ArticleListProps {
     view?: ArticleView;
 }
 
-const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.SMALL ? 9 : 3)
+const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.CARD ? 9 : 3)
     .fill(0)
     .map((item, index) => (
         // eslint-disable-next-line react/no-array-index-key
@@ -24,7 +24,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
     const {
         className,
         articles,
-        view = ArticleView.SMALL,
+        view = ArticleView.CARD,
         isLoading,
     } = props;
     const { t } = useTranslation();

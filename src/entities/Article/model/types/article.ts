@@ -37,8 +37,8 @@ export const enum ArticleType {
 }
 
 export enum ArticleView {
-    BIG = 'BIG',
-    SMALL = 'SMALL',
+    LIST = 'LIST',
+    CARD = 'CARD',
 }
 
 export interface IArticle {
