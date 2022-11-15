@@ -13,7 +13,7 @@ import { scrollPositionReducer } from '@/features/SaveScrollPosition';
 export function createReduxStore(
     initialState?: IStateSchema,
     asyncReducers?: ReducersMapObject<IStateSchema>,
-    navigate?: (to: To, options?: NavigateOptions) => void,
+    // navigate?: (to: To, options?: NavigateOptions) => void,
 ) {
     const rootReducer: ReducersMapObject<IStateSchema> = {
         ...asyncReducers,
