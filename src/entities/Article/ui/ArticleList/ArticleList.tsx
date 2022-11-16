@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { memo } from 'react';
+import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { ArticleListItemSkeleton } from '@/entities/Article/ui/ArticleListItem/ArticleListItemSkeleton';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
@@ -12,6 +12,7 @@ interface ArticleListProps {
     articles: IArticle[]
     isLoading?: boolean;
     view?: ArticleView;
+    target?: HTMLAttributeAnchorTarget;
 }
 
 const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.CARD ? 9 : 3)
@@ -27,6 +28,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
         articles,
         view = ArticleView.CARD,
         isLoading,
+        target,
     } = props;
     const { t } = useTranslation();
 
@@ -36,12 +38,13 @@ export const ArticleList = memo((props: ArticleListProps) => {
             view={view}
             className={cls.card}
             key={article.id}
+            target={target}
         />
     );
 
     if (!isLoading && !articles.length) {
         return (
-            <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
+            <div className={classNames(cls.articleList, {}, [className, cls[view]])}>
                 <Text size={TextSize.L} title={t('Статьи не найдены')} />
             </div>
         );
