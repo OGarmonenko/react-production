@@ -6,6 +6,9 @@ import cls from './Navbar.module.scss';
 import { Button, ButtonVariant } from '@/shared/ui/Button/Button';
 import { LoginModal } from '@/features/AuthByUsername';
 import { getUserAuthData, userActions } from '@/entities/User';
+import { TextTheme, Text } from '@/shared/ui/Text/Text';
+import { AppLink, AppLinkTheme } from '@/shared/ui/Applink/AppLink';
+import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
 
 interface INavbarProps {
     className?: string;
@@ -32,6 +35,18 @@ export const Navbar = memo(({ className }: INavbarProps) => {
     if (authData) {
         return (
             <header className={classNames(cls.navbar, {}, [className])}>
+                <Text
+                    className={cls.appName}
+                    title={t('Advanced React')}
+                    theme={TextTheme.PRIMARY}
+                />
+                <AppLink
+                    to={RoutePath.article_create}
+                    theme={AppLinkTheme.INVERTABLE}
+                    className={cls.createBtn}
+                >
+                    {t('Create article')}
+                </AppLink>
                 <Button
                     theme={ButtonVariant.CLEAR_INVERTED}
                     className={classNames(cls.links)}
@@ -45,6 +60,11 @@ export const Navbar = memo(({ className }: INavbarProps) => {
 
     return (
         <header className={classNames(cls.navbar, {}, [className])}>
+            <Text
+                className={cls.appName}
+                title={t('Advanced React')}
+                theme={TextTheme.PRIMARY}
+            />
             <Button
                 theme={ButtonVariant.CLEAR_INVERTED}
                 className={classNames(cls.links)}
