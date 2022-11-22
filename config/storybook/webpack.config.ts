@@ -49,5 +49,12 @@ export default ({ config }: {config: webpack.Configuration}) => {
         __PROJECT__: JSON.stringify('storybook'),
     }));
 
+    config!.resolve = {
+        ...config!.resolve,
+        extensions: ['.tsx', '.ts', '.js'],
+        preferAbsolute: true,
+        modules: [paths.src, 'node_modules'],
+    };
+
     return config;
 };
