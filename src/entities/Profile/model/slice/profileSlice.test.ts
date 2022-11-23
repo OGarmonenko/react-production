@@ -1,6 +1,6 @@
 import {
     profileActions, profileReducer, IProfileSchema, updateProfileData, ValidateProfileError,
-} from '@/entities/Profile';
+} from '../../index';
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
 
