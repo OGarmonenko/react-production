@@ -129,9 +129,9 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <div className={classNames(cls.articleDetails, {}, [className])}>
+            <article className={classNames(cls.articleDetails, {}, [className])}>
                 {content}
-            </div>
+            </article>
         </DynamicModuleLoader>
     );
 });
