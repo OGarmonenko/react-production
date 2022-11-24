@@ -55,6 +55,7 @@ module.exports = {
                 'gap',
                 'role',
                 'titleTagType',
+                'as',
             ],
         }],
         'max-len': ['error', { ignoreComments: true, code: 120 }],

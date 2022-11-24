@@ -20,9 +20,10 @@
   "City": "City",
   "Currency": "Валюта",
   "No comments": "Комментарии отсутствуют",
-  "Send": "Send",
+  "Send": "Отправить",
   "Enter your comment": "Введите Ваш комментарий",
   "Read": "Читать",
   "Advanced React": "Продвинутый Реакт",
-  "Create article": "Создать статью"
+  "Create article": "Создать статью",
+  "Country": "Страна"
 }
