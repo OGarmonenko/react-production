@@ -13,7 +13,26 @@ export default {
 
 const Template: ComponentStory<typeof ListBox> = (args) => <ListBox {...args} />;
 
-export const Normal = Template.bind({});
-Normal.args = {
+export const Default = Template.bind({});
+Default.args = {
+    label: 'Укажите значение',
+    defaultValue: 'Укажите значение',
+    readonly: false,
+    direction: 'bottom',
+    items: [
+        { value: '123', content: 'Первый пункт' },
+        { value: '1234', content: 'Второй пункт' },
+    ],
+};
 
+export const Selected = Template.bind({});
+Selected.args = {
+    label: 'Укажите значение',
+    value: 'Первый пункт',
+    readonly: false,
+    direction: 'bottom',
+    items: [
+        { value: '123', content: 'Первый пункт' },
+        { value: '1234', content: 'Второй пункт' },
+    ],
 };
