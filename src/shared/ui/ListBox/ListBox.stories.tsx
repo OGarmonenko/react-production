@@ -18,7 +18,7 @@ Default.args = {
     label: 'Укажите значение',
     defaultValue: 'Укажите значение',
     readonly: false,
-    direction: 'bottom',
+    direction: 'bottom right',
     items: [
         { value: '123', content: 'Первый пункт' },
         { value: '1234', content: 'Второй пункт' },
@@ -28,9 +28,9 @@ Default.args = {
 export const Selected = Template.bind({});
 Selected.args = {
     label: 'Укажите значение',
-    value: 'Первый пункт',
+    value: '1234',
     readonly: false,
-    direction: 'bottom',
+    direction: 'bottom right',
     items: [
         { value: '123', content: 'Первый пункт' },
         { value: '1234', content: 'Второй пункт' },
