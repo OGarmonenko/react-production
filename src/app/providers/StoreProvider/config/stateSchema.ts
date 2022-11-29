@@ -7,17 +7,20 @@ import { AxiosInstance } from 'axios';
 import type { ICounterSchema } from '@/entities/Counter';
 import type { IUserSchema } from '@/entities/User';
 import type { ILoginSchema } from '@/features/AuthByUsername';
-import type { IProfileSchema } from '@/entities/Profile';
+
 import type { IArticleDetailsSchema } from '@/entities/Article';
 import { ArticleDetailsPageSchema } from '@/pages/ArticleDetailsPage';
 import { AddCommentFormSchema } from '@/features/addCommentForm';
 import { ArticlesPageSchema } from '@/pages/ArticlesPage';
 import { ISaveScrollSchema } from '@/features/SaveScrollPosition';
+import { rtkApi } from '@/shared/api/rtkApi';
+import { IProfileSchema } from '@/features/editableProfileCard';
 
 export interface IStateSchema {
     counter: ICounterSchema;
     user: IUserSchema;
     scrollPosition: ISaveScrollSchema;
+    [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>;
 
     // asyncReducers
     loginForm?: ILoginSchema;
