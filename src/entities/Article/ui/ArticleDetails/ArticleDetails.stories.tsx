@@ -2,8 +2,9 @@ import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator';
-import { IArticle, ArticleBlockType, ArticleType } from '../../model/types/article';
+import { ArticleBlockType, ArticleType, IArticle } from '../../model/types/article';
 import { ArticleDetails } from './ArticleDetails';
+import { UserRole } from '@/entities/User';
 
 export default {
     title: 'entities/ArticleDetails',
@@ -26,6 +27,7 @@ const article: IArticle = {
     user: {
         id: '1',
         username: 'Olga',
+        roles: [UserRole.ADMIN],
     },
     blocks: [
         {

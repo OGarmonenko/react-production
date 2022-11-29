@@ -26,5 +26,7 @@
   "Advanced React": "Продвинутый Реакт",
   "Create article": "Создать статью",
   "Country": "Страна",
-  "Profile": "Профиль"
+  "Profile": "Профиль",
+  "Admin panel": "Админ панель",
+  "You do not have access to this page": "У вас нет доступа к данной странице"
 }
