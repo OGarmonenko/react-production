@@ -56,6 +56,7 @@ module.exports = {
                 'role',
                 'titleTagType',
                 'as',
+                'fallback',
             ],
         }],
         'max-len': ['error', { ignoreComments: true, code: 120 }],

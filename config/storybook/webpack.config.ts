@@ -45,9 +45,11 @@ export default ({ config }: {config: webpack.Configuration}) => {
 
     config.module!.rules.push(buildCssLoader(true));
 
+    // config.resolve!.modules!.push(path.join(__dirname, '../node_modules'));
+
     config.plugins!.push(new DefinePlugin({
         __IS_DEV__: JSON.stringify(true),
-        __API__: JSON.stringify(''),
+        __API__: JSON.stringify('https://testapi.ru'),
         __PROJECT__: JSON.stringify('storybook'),
     }));
 
