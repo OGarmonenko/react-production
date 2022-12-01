@@ -10,7 +10,7 @@ export interface IThemeProviderProps {
 
 const defaultTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme || Theme.LIGHT;
 
-const ThemeProvider: FC<IThemeProviderProps> = (props) => {
+const ThemeProvider = (props: IThemeProviderProps) => {
     const {
         children,
         initialTheme,

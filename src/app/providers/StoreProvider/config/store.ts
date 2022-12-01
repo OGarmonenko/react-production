@@ -1,8 +1,8 @@
 import {
     CombinedState, configureStore, Reducer, ReducersMapObject,
 } from '@reduxjs/toolkit';
-import { To } from 'history';
-import { NavigateOptions } from 'react-router';
+// import { To } from 'history';
+// import { NavigateOptions } from 'react-router';
 import type { IStateSchema, IThunkExtraArg } from './stateSchema';
 import { counterReducer } from '@/entities/Counter';
 import { userReducer } from '@/entities/User';
