@@ -5,6 +5,9 @@ import type { IStateSchema, IReduxStoreWithManager, IThunkConfig } from './confi
 export {
     StoreProvider,
     createReduxStore,
+};
+
+export type{
     IStateSchema,
     IReduxStoreWithManager,
     AppDispatch,

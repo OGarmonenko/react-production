@@ -1,8 +1,8 @@
 export { getUserAuthData } from './model/selectors/getUserAuthData';
 export { userReducer, userActions } from './model/slice/userSlice';
 export { isUserAdmin, isUserManager, getUserRoles } from './model/selectors/roleSelectors';
-export {
+export type {
     IUserSchema,
     IUser,
-    UserRole,
 } from './model/types/user';
+export { UserRole } from '@/entities/User/model/consts/consts';
