@@ -57,6 +57,7 @@ module.exports = {
                 'titleTagType',
                 'as',
                 'fallback',
+                'border',
             ],
         }],
         'max-len': ['error', { ignoreComments: true, code: 120 }],

@@ -23,6 +23,7 @@ export const Skeleton = memo((props: SkeletonProps) => {
         borderRadius: border,
     };
 
+    console.log('Skeleton');
     return (
         <div
             className={classNames(cls.skeleton, {}, [className])}
