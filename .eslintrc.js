@@ -69,6 +69,7 @@ module.exports = {
         'no-undef': 'off',
         'arrow-body-style': 'off',
         'feature-sliced-plugin/path-checker': 'error',
+        'react/no-array-index-key': 'off',
     },
     globals: {
         __IS_DEV__: true,
