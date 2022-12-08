@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback, useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import EyeIcon from 'shared/assets/icons/eye-20-20.svg';
-import CalendarIcon from 'shared/assets/icons/calendar-20-20.svg';
+import EyeIcon from '@/shared/assets/icons/eye-20-20.svg';
+import CalendarIcon from '@/shared/assets/icons/calendar-20-20.svg';
 import { Skeleton } from '@/shared/ui/Skeleton/Skeleton';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
 import { Text, TextAlign, TextSize } from '@/shared/ui/Text/Text';
