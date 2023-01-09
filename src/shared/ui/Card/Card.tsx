@@ -1,5 +1,5 @@
 import { HTMLAttributes, ReactNode } from 'react';
-import { classNames } from '@/shared/lib/classNames/classNames';
+import { classNames, TMods } from '@/shared/lib/classNames/classNames';
 import cls from './Card.module.scss';
 
 export enum CardTheme {
@@ -10,7 +10,8 @@ export enum CardTheme {
 interface CardProps extends HTMLAttributes<HTMLDivElement> {
     className?: string;
     children: ReactNode;
-    theme?: CardTheme
+    theme?: CardTheme;
+    max?: boolean;
 }
 
 export const Card = (props: CardProps) => {
@@ -18,12 +19,17 @@ export const Card = (props: CardProps) => {
         className,
         children,
         theme = CardTheme.NORMAL,
+        max,
         ...otherProps
     } = props;
 
+    const mods: TMods = {
+        [cls.max]: max,
+    };
+
     return (
         <div
-            className={classNames(cls.card, {}, [className, cls[theme]])}
+            className={classNames(cls.card, mods, [className, cls[theme]])}
             {...otherProps}
         >
             {children}
