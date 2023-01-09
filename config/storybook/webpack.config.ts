@@ -18,7 +18,8 @@ export default ({ config }: {config: webpack.Configuration}) => {
     config.resolve!.extensions!.push('.ts', '.tsx');
     // eslint-disable-next-line no-param-reassign
     config.resolve!.alias = {
-        '@': path.resolve(__dirname, '..', '..', 'src'),
+        ...config!.resolve!.alias,
+        '@': paths.src,
     };
 
     // eslint-disable-next-line no-param-reassign
@@ -44,8 +45,6 @@ export default ({ config }: {config: webpack.Configuration}) => {
     });
 
     config.module!.rules.push(buildCssLoader(true));
-
-    // config.resolve!.modules!.push(path.join(__dirname, '../node_modules'));
 
     config.plugins!.push(new DefinePlugin({
         __IS_DEV__: JSON.stringify(true),
