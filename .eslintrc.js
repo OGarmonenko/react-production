@@ -24,6 +24,8 @@ module.exports = {
         'i18next',
         'react-hooks',
         'feature-sliced-plugin',
+        'unused-imports',
+        'import',
     ],
     rules: {
         'react/jsx-indent': [2, 4],
@@ -33,6 +35,7 @@ module.exports = {
             2, { extensions: ['.js', '.jsx', '.tsx'] },
         ],
         'import/no-unresolved': 'off',
+        'unused-imports/no-unused-imports': 'error',
         'import/prefer-default-export': 'off',
         'no-unused-vars': 'warn',
         'react/require-default-props': 'off',
@@ -70,6 +73,23 @@ module.exports = {
         'arrow-body-style': 'off',
         'feature-sliced-plugin/path-checker': 'error',
         'react/no-array-index-key': 'off',
+        'import/order': [
+            'error',
+            {
+                pathGroups: [
+                    {
+                        pattern: '@/**',
+                        group: 'internal',
+                        position: 'after',
+                    },
+                ],
+                'newlines-between': 'always',
+                alphabetize: {
+                    order: 'asc',
+                    caseInsensitive: false,
+                },
+            },
+        ],
     },
     globals: {
         __IS_DEV__: true,

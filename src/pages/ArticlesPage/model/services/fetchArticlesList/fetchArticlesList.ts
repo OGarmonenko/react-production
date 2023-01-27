@@ -1,7 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import type { IThunkConfig } from '@/app/providers/StoreProvider';
-import type { IArticle } from '@/entities/Article';
-import { ArticleType } from '@/entities/Article';
+
 import {
     getArticlesPageLimit,
     getArticlesPageOrder,
@@ -9,6 +7,10 @@ import {
     getArticlesPageSort,
     getArticlesPageType,
 } from '../../selectors/articlesPageSelectors';
+
+import type { IThunkConfig } from '@/app/providers/StoreProvider';
+import type { IArticle } from '@/entities/Article';
+import { ArticleType } from '@/entities/Article';
 import { addQueryParams } from '@/shared/lib/url/addQueryParams/addQueryParams';
 
 interface FetchArticlesListProps {

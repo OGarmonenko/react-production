@@ -1,6 +1,8 @@
-import { getProfileValidateErrors } from './getProfileValidateErrors';
-import { IStateSchema } from '@/app/providers/StoreProvider';
 import { ValidateProfileError } from '../../consts/consts';
+
+import { getProfileValidateErrors } from './getProfileValidateErrors';
+
+import { IStateSchema } from '@/app/providers/StoreProvider';
 
 describe('getProfileValidateErrors.test', () => {
     test('should work with filled state', () => {

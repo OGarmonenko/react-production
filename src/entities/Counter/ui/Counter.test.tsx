@@ -1,7 +1,8 @@
 import { screen, fireEvent } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
-import { componentRender } from '@/shared/lib/test/componentRender';
+
 import { Counter } from './Counter';
+
+import { componentRender } from '@/shared/lib/test/componentRender';
 
 describe('Counter', () => {
     test('should be renders title with value = 10', () => {

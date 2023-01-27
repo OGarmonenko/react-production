@@ -1,12 +1,10 @@
-import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
+import React from 'react';
 
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
 import AboutPage from './AboutPage';
+
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator';
-import {
-    Normal,
-} from '@/features/articleRecommendationsList/ui/ArticleRecommendationsList/ArticleRecommendationsList.stories';
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
 
 export default {

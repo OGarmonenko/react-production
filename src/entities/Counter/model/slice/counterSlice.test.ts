@@ -1,5 +1,6 @@
-import { counterReducer, counterActions } from './counterSlice';
 import type { ICounterSchema } from '../types/counterSchema';
+
+import { counterReducer, counterActions } from './counterSlice';
 
 describe('counterSlice.test', () => {
     const state: ICounterSchema = {

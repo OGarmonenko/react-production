@@ -1,5 +1,6 @@
-import { IStateSchema } from '@/app/providers/StoreProvider';
 import { getProfileError } from './getProfileError';
+
+import { IStateSchema } from '@/app/providers/StoreProvider';
 
 describe('getProfileError.test', () => {
     test('should return error', () => {

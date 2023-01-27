@@ -2,19 +2,19 @@ import {
     AnyAction, CombinedState, EnhancedStore, Reducer, ReducersMapObject,
 } from '@reduxjs/toolkit';
 import { AxiosInstance } from 'axios';
+
 // import { To } from 'history';
 // import { NavigateOptions } from 'react-router';
+import type { IArticleDetailsSchema } from '@/entities/Article';
 import type { ICounterSchema } from '@/entities/Counter';
 import type { IUserSchema } from '@/entities/User';
 import type { ILoginSchema } from '@/features/AuthByUsername';
-
-import type { IArticleDetailsSchema } from '@/entities/Article';
-import { ArticleDetailsPageSchema } from '@/pages/ArticleDetailsPage';
-import { AddCommentFormSchema } from '@/features/addCommentForm';
-import { ArticlesPageSchema } from '@/pages/ArticlesPage';
 import { ISaveScrollSchema } from '@/features/SaveScrollPosition';
-import { rtkApi } from '@/shared/api/rtkApi';
+import { AddCommentFormSchema } from '@/features/addCommentForm';
 import { IProfileSchema } from '@/features/editableProfileCard';
+import { ArticleDetailsPageSchema } from '@/pages/ArticleDetailsPage';
+import { ArticlesPageSchema } from '@/pages/ArticlesPage';
+import { rtkApi } from '@/shared/api/rtkApi';
 
 export interface IStateSchema {
     counter: ICounterSchema;

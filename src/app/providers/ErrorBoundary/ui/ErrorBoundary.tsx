@@ -1,4 +1,5 @@
 import React, { ErrorInfo, ReactNode, Suspense } from 'react';
+
 import { ErrorOnPage } from '@/widgets/ErrorOnPage/ui/ErrorOnPage';
 
 interface IErrorBoundaryProps {

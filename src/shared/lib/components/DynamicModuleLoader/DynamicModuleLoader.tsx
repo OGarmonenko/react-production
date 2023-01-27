@@ -1,6 +1,7 @@
-import { FC, ReactNode, useEffect } from 'react';
-import { useDispatch, useStore } from 'react-redux';
 import { Reducer } from '@reduxjs/toolkit';
+import { ReactNode, useEffect } from 'react';
+import { useDispatch, useStore } from 'react-redux';
+
 import { IReduxStoreWithManager, IStateSchema, StateSchemaKey } from '@/app/providers/StoreProvider/config/stateSchema';
 
 export type ReducersList = {

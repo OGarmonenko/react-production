@@ -1,5 +1,6 @@
-import { IStateSchema } from '@/app/providers/StoreProvider';
 import { getLoginError } from './getLoginError';
+
+import { IStateSchema } from '@/app/providers/StoreProvider';
 
 describe('getLoginError.test', () => {
     test('should return error', () => {

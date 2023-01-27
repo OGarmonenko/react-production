@@ -1,7 +1,9 @@
-import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
+import React from 'react';
+
 import '@/app/styles/variables/global.scss';
 import LoginForm from './LoginForm';
+
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator';
 
 export default {

@@ -1,8 +1,10 @@
 import {
-    ButtonHTMLAttributes, FC, memo, ReactNode,
+    ButtonHTMLAttributes, ReactNode,
 } from 'react';
-import { classNames, TMods } from '@/shared/lib/classNames/classNames';
+
 import cls from './Button.module.scss';
+
+import { classNames, TMods } from '@/shared/lib/classNames/classNames';
 
 export enum ButtonVariant {
     CLEAR = 'clear',

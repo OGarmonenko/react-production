@@ -1,5 +1,6 @@
-import { IStateSchema } from '@/app/providers/StoreProvider';
 import { getLoginPassword } from './getLoginPassword';
+
+import { IStateSchema } from '@/app/providers/StoreProvider';
 
 describe('getLoginPassword.test', () => {
     test('should return value', () => {

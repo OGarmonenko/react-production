@@ -4,14 +4,16 @@ import {
 } from 'react';
 import { useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
-import { classNames } from '@/shared/lib/classNames/classNames';
-import { useInfiniteScroll } from '@/shared/lib/hooks/useInfiniteScroll';
+
 import cls from './PageContent.module.scss';
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
-import { getScrollPositionByPath, scrollPositionActions } from '@/features/SaveScrollPosition';
+
 import { IStateSchema } from '@/app/providers/StoreProvider';
-import { useThrottle } from '@/shared/lib/hooks/useThrottle';
+import { getScrollPositionByPath, scrollPositionActions } from '@/features/SaveScrollPosition';
 import { CONSTANTS } from '@/shared/const/constants';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
+import { useInfiniteScroll } from '@/shared/lib/hooks/useInfiniteScroll';
+import { useThrottle } from '@/shared/lib/hooks/useThrottle';
 
 interface PageProps {
     className?: string;
