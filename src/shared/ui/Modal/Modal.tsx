@@ -2,9 +2,9 @@ import React, { ReactNode } from 'react';
 import { classNames, TMods } from '@/shared/lib/classNames/classNames';
 import cls from './Modal.module.scss';
 import { Portal } from '../Portal/Portal';
-import { useTheme } from '@/app/providers/ThemeProvider';
 import { Overlay } from '../Overlay/Overlay';
 import { useModal } from '@/shared/lib/hooks/useModal';
+import { useTheme } from '@/shared/lib/hooks/useTheme';
 
 interface IModalProps {
     className?: string;

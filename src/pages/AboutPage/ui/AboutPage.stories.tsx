@@ -2,12 +2,12 @@ import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
-import { Theme } from '@/app/providers/ThemeProvider';
 import AboutPage from './AboutPage';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator';
 import {
     Normal,
 } from '@/features/articleRecommendationsList/ui/ArticleRecommendationsList/ArticleRecommendationsList.stories';
+import { Theme } from '@/shared/const/theme';
 
 export default {
     title: 'pages/AboutPage',
