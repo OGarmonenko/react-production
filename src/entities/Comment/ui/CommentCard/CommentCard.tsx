@@ -6,8 +6,8 @@ import { Skeleton } from '@/shared/ui/Skeleton/Skeleton';
 import cls from './CommentCard.module.scss';
 import { IComment } from '../../model/types/comment';
 import { AppLink } from '@/shared/ui/Applink/AppLink';
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
 import { VStack } from '@/shared/ui/Stack';
+import { RoutePath } from '@/shared/const/router';
 
 interface CommentCardProps {
     className?: string;
